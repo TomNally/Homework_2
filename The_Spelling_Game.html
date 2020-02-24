@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+	<head>
+		<meta charset="utf-8">
+		<title>The Spelling Game</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		
+		<link href="index_css.css" rel="stylesheet" type="text/css" >
+		<!--  <script src="spelling.js"></script> -->
+		
+	</head>
+
+
+	<body>
+		
+		<div class="w3-container">
+		
+		<div class="w3-container w3-pale-blue">
+		<h1>The Spelling Game!</h1>
+		
+		<p>by Tom Nally</p>
+		
+		<p>
+		Below, find 26 recordings, one for each letter of the alphabet. Your task 
+		is to play each recording, then spell the word in the textbox provided. If  
+		you spell it correctly, you will be notified <i>Correct!</i> Otherwise, you will 
+		be notified <i>Not Correct!</i>
+		</p>
+		
+		<p>
+		One thing to remember is this: a word that begins with a familiar sound 
+		may not be spelled with the letter associated with that sound. For example, 
+		<i>xylophone</i> begins with the letter "x", but the sound we hear is "z". 
+		To trick the player, xylophone <i>might</i> be placed as a "z" word, because that's the sound we <i>hear!</i>. 
+		But unless you provide the correct spelling, you will be provided with a 
+		<i>Not Correct!</i> notification.
+		</p>
+		
+		<p>You may try each word as many times as you like!</p>
+		</div>
+		
+		<div class="w3-container w3-light-blue">
+		<p>
+		(<a href="http://marvin.cs.uidaho.edu/misspell.html">SEE THIS LINK</a> for the  
+		source of these <i>hard-to-spell</i> words.)
+		</p>
+		</div>
+		
+		<h2>What are you waiting for? Begin already!</h2>
+		
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<!-- arctic -->
+		<audio id="arctic">
+			<source src="audio/arctic.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="a_playAudio()" type="button">Play an "a" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="a-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="a_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-a"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "arctic" */
+			
+			var a_arctic = document.getElementById("arctic");
+			function a_playAudio() 
+			{ 
+				a_arctic.play(); 
+				console.log("function playAudio() entered");
+			}
+			
+			function a_checkSpelling()
+			{
+				console.log("function checkSpelling() has been entered.");
+				console.log("a_spell = ", document.getElementById("a-spell").value);
+				
+				if ("arctic" ===  document.getElementById("a-spell").value)
+				{
+					console.log("if statement has been entered.");
+					document.getElementById("assess-a").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					console.log("else statement has been entered.");
+					document.getElementById("assess-a").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		
+		<!-- baccalaureate -->
+		<div class="w3-container w3-padding-16" >
+		
+		<audio id="baccalaureate">
+			<source src="audio/baccalaureate.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="b_playAudio()" type="button">Play a "b" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="b-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="b_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-b"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "baccalaureate" */
+			
+			var b_baccalaureate = document.getElementById("baccalaureate");
+			function b_playAudio() 
+			{ 
+				b_baccalaureate.play(); 
+			}
+			
+			function b_checkSpelling()
+			{
+				
+				if ("baccalaureate" ===  document.getElementById("b-spell").value)
+				{
+					document.getElementById("assess-b").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-b").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- cantaloupe -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="cantaloupe">
+			<source src="audio/cantaloupe.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="c_playAudio()" type="button">Play a "c" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="c-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="c_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-c"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "cantaloupe" */
+			
+			var c_cantaloupe = document.getElementById("cantaloupe");
+			function c_playAudio() 
+			{ 
+				c_cantaloupe.play(); 
+				
+			}
+			
+			function c_checkSpelling()
+			{
+				
+				if ("cantaloupe" ===  document.getElementById("c-spell").value)
+				{
+					document.getElementById("assess-c").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-c").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		
+		<!-- desiccation -->
+		<div class="w3-container w3-padding-16">
+		<audio id="desiccation">
+			<source src="audio/desiccation.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="d_playAudio()" type="button">Play a "d" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="d-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="d_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-d"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "desiccation" */
+			
+			var d_desiccation = document.getElementById("desiccation");
+			function d_playAudio() 
+			{ 
+				d_desiccation.play(); 
+				
+			}
+			
+			function d_checkSpelling()
+			{
+				
+				if ("desiccation" ===  document.getElementById("d-spell").value)
+				{
+					document.getElementById("assess-d").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					console.log("else statement has been entered.");
+					document.getElementById("assess-d").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- entrepreneur -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="entrepreneur">
+			<source src="audio/entrepreneur.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="e_playAudio()" type="button">Play an "e" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="e-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="e_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-e"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "entrepreneur" */
+			
+			var e_entrepreneur = document.getElementById("entrepreneur");
+			function e_playAudio() 
+			{ 
+				e_entrepreneur.play(); 
+				
+			}
+			
+			function e_checkSpelling()
+			{
+				
+				if ("entrepreneur" ===  document.getElementById("e-spell").value)
+				{
+					document.getElementById("assess-e").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					console.log("else statement has been entered.");
+					document.getElementById("assess-e").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- facetious -->
+		<div class="w3-container w3-padding-16">
+		<audio id="facetious">
+			<source src="audio/facetious.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="f_playAudio()" type="button">Play an "f" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="f-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="f_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-f"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "facetious" */
+			
+			var f_facetious = document.getElementById("facetious");
+			function f_playAudio() 
+			{ 
+				f_facetious.play(); 
+				
+			}
+			
+			function f_checkSpelling()
+			{
+				
+				if ("facetious" ===  document.getElementById("f-spell").value)
+				{
+					document.getElementById("assess-f").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-f").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- guillotine -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="guillotine">
+			<source src="audio/guillotine.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="g_playAudio()" type="button">Play a "g" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="g-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="g_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-g"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "guillotine" */
+			
+			var g_guillotine = document.getElementById("guillotine");
+			function g_playAudio() 
+			{ 
+				g_guillotine.play(); 
+				
+			}
+			
+			function g_checkSpelling()
+			{
+				
+				if ("guillotine" ===  document.getElementById("g-spell").value)
+				{
+					document.getElementById("assess-g").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-g").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- heinous -->
+		<div class="w3-container w3-padding-16">
+		<audio id="heinous">
+			<source src="audio/heinous.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="h_playAudio()" type="button">Play an "h" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="h-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="h_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-h"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "heinous" */
+			
+			var h_heinous = document.getElementById("heinous");
+			function h_playAudio() 
+			{ 
+				h_heinous.play(); 
+				
+			}
+			
+			function h_checkSpelling()
+			{
+				
+				if ("heinous" ===  document.getElementById("h-spell").value)
+				{
+					document.getElementById("assess-h").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-h").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- isthmus -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="isthmus">
+			<source src="audio/isthmus.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="i_playAudio()" type="button">Play an "i" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="i-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="i_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-i"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "isthmus" */
+			
+			var i_isthmus = document.getElementById("isthmus");
+			function i_playAudio() 
+			{ 
+				i_isthmus.play(); 
+				
+			}
+			
+			function i_checkSpelling()
+			{
+				
+				if ("isthmus" ===  document.getElementById("i-spell").value)
+				{
+					document.getElementById("assess-i").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-i").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		
+		<!-- judgment -->
+		<div class="w3-container w3-padding-16">
+		<audio id="judgment">
+			<source src="audio/judgment.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="j_playAudio()" type="button">Play a "j" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="j-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="j_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-j"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "judgment" */
+			
+			var j_judgment = document.getElementById("judgment");
+			function j_playAudio() 
+			{ 
+				j_judgment.play(); 
+				
+			}
+			
+			function j_checkSpelling()
+			{
+				
+				if ("judgment" ===  document.getElementById("j-spell").value)
+				{
+					document.getElementById("assess-j").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-j").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- quiche -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="k_quiche">
+			<source src="audio/k_quiche.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="k_playAudio()" type="button">Play a "k" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="k-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="k_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-k"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "quiche" */
+			
+			var k_k_quiche = document.getElementById("k_quiche");
+			function k_playAudio() 
+			{ 
+				k_k_quiche.play(); 
+				
+			}
+			
+			function k_checkSpelling()
+			{
+				
+				if ("quiche" ===  document.getElementById("k-spell").value)
+				{
+					document.getElementById("assess-k").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-k").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- labyrinth -->
+		<div class="w3-container w3-padding-16">
+		<audio id="labyrinth">
+			<source src="audio/labyrinth.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="l_playAudio()" type="button">Play an "l" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="l-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="l_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-l"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "labyrinth" */
+			
+			var l_labyrinth = document.getElementById("labyrinth");
+			function l_playAudio() 
+			{ 
+				l_labyrinth.play(); 
+				
+			}
+			
+			function l_checkSpelling()
+			{
+				
+				if ("labyrinth" ===  document.getElementById("l-spell").value)
+				{
+					document.getElementById("assess-l").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-l").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- macabre -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="macabre">
+			<source src="audio/macabre.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="m_playAudio()" type="button">Play an "m" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="m-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="m_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-m"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "macabre" */
+			
+			var m_macabre = document.getElementById("macabre");
+			function m_playAudio() 
+			{ 
+				m_macabre.play(); 
+				
+			}
+			
+			function m_checkSpelling()
+			{
+				
+				if ("macabre" ===  document.getElementById("m-spell").value)
+				{
+					document.getElementById("assess-m").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-m").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		
+		<!-- n_gnome -->
+		<div class="w3-container w3-padding-16">
+		<audio id="n_gnome">
+			<source src="audio/n_gnome.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="n_playAudio()" type="button">Play an "n" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="n-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="n_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-n"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "n_gnome" */
+			
+			var n_n_gnome = document.getElementById("n_gnome");
+			function n_playAudio() 
+			{ 
+				n_n_gnome.play(); 
+				
+			}
+			
+			function n_checkSpelling()
+			{
+				
+				if ("gnome" ===  document.getElementById("n-spell").value)
+				{
+					document.getElementById("assess-n").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-n").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- o_homage -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="o_homage">
+			<source src="audio/o_homage.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="o_playAudio()" type="button">Play an "o" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="o-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="o_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-o"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "o_homage" */
+			
+			var o_o_homage = document.getElementById("o_homage");
+			function o_playAudio() 
+			{ 
+				o_o_homage.play(); 
+				
+			}
+			
+			function o_checkSpelling()
+			{
+				
+				if ("homage" ===  document.getElementById("o-spell").value)
+				{
+					document.getElementById("assess-o").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-o").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- pinochle -->
+		<div class="w3-container w3-padding-16">
+		<audio id="pinochle">
+			<source src="audio/pinochle.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="p_playAudio()" type="button">Play a "p" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="p-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="p_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-p"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "pinochle" */
+			
+			var p_pinochle = document.getElementById("pinochle");
+			function p_playAudio() 
+			{ 
+				p_pinochle.play(); 
+				
+			}
+			
+			function p_checkSpelling()
+			{
+				
+				if ("pinochle" ===  document.getElementById("p-spell").value)
+				{
+					document.getElementById("assess-p").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-p").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- queue -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="queue">
+			<source src="audio/queue.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="q_playAudio()" type="button">Play a "q" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="q-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="q_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-q"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "queue" */
+			
+			var q_queue = document.getElementById("queue");
+			function q_playAudio() 
+			{ 
+				q_queue.play(); 
+				
+			}
+			
+			function q_checkSpelling()
+			{
+				
+				if ("queue" ===  document.getElementById("q-spell").value)
+				{
+					document.getElementById("assess-q").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-q").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- rhythm -->
+		<div class="w3-container w3-padding-16">
+		<audio id="rhythm">
+			<source src="audio/rhythm.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="r_playAudio()" type="button">Play an "r" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="r-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="r_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-r"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "rhythm" */
+			
+			var r_rhythm = document.getElementById("rhythm");
+			function r_playAudio() 
+			{ 
+				r_rhythm.play(); 
+				
+			}
+			
+			function r_checkSpelling()
+			{
+				
+				if ("rhythm" ===  document.getElementById("r-spell").value)
+				{
+					document.getElementById("assess-r").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-r").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- s_pseudonym -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="s_pseudonym">
+			<source src="audio/s_pseudonym.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="s_playAudio()" type="button">Play an "s" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="s-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="s_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-s"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "s_pseudonym" */
+			
+			var s_s_pseudonym = document.getElementById("s_pseudonym");
+			function s_playAudio() 
+			{ 
+				s_s_pseudonym.play(); 
+				
+			}
+			
+			function s_checkSpelling()
+			{
+				
+				if ("pseudonym" ===  document.getElementById("s-spell").value)
+				{
+					document.getElementById("assess-s").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-s").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- t_ptarmigan -->
+		<div class="w3-container w3-padding-16">
+		<audio id="t_ptarmigan">
+			<source src="audio/t_ptarmigan.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="t_playAudio()" type="button">Play a "t" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="t-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="t_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-t"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "t_ptarmigan" */
+			
+			var t_t_ptarmigan = document.getElementById("t_ptarmigan");
+			function t_playAudio() 
+			{ 
+				t_t_ptarmigan.play(); 
+				
+			}
+			
+			function t_checkSpelling()
+			{
+				
+				if ("ptarmigan" ===  document.getElementById("t-spell").value)
+				{
+					document.getElementById("assess-t").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-t").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		
+		<!-- unanimous -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="unanimous">
+			<source src="audio/unanimous.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="u_playAudio()" type="button">Play a "u" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="u-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="u_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-u"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "unanimous" */
+			
+			var u_unanimous = document.getElementById("unanimous");
+			function u_playAudio() 
+			{ 
+				u_unanimous.play(); 
+				
+			}
+			
+			function u_checkSpelling()
+			{
+				
+				if ("unanimous" ===  document.getElementById("u-spell").value)
+				{
+					document.getElementById("assess-u").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-u").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- vignette -->
+		<div class="w3-container w3-padding-16">
+		<audio id="vignette">
+			<source src="audio/vignette.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="v_playAudio()" type="button">Play a "v" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="v-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="v_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-v"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "vignette" */
+			
+			var v_vignette = document.getElementById("vignette");
+			function v_playAudio() 
+			{ 
+				v_vignette.play(); 
+				
+			}
+			
+			function v_checkSpelling()
+			{
+				
+				if ("vignette" ===  document.getElementById("v-spell").value)
+				{
+					document.getElementById("assess-v").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-v").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- writhe -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="writhe">
+			<source src="audio/writhe.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="w_playAudio()" type="button">Play a "w" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="w-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="w_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-w"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "writhe" */
+			
+			var w_writhe = document.getElementById("writhe");
+			function w_playAudio() 
+			{ 
+				w_writhe.play(); 
+				
+			}
+			
+			function w_checkSpelling()
+			{
+				
+				if ("writhe" ===  document.getElementById("w-spell").value)
+				{
+					document.getElementById("assess-w").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-w").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- xylene -->
+		<div class="w3-container w3-padding-16">
+		<audio id="xylene">
+			<source src="audio/xylene.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="x_playAudio()" type="button">Play an "x" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="x-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="x_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-x"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "xylene" */
+			
+			var x_xylene = document.getElementById("xylene");
+			function x_playAudio() 
+			{ 
+				x_xylene.play(); 
+				
+			}
+			
+			function x_checkSpelling()
+			{
+				
+				if ("xylene" ===  document.getElementById("x-spell").value)
+				{
+					document.getElementById("assess-x").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-x").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- y_euphoric -->
+		<div class="w3-container w3-pale-green w3-padding-16">
+		<audio id="y_euphoric">
+			<source src="audio/y_euphoric.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="y_playAudio()" type="button">Play a "y" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="y-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="y_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-y"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "y_euphoric" */
+			
+			var y_y_euphoric = document.getElementById("y_euphoric");
+			function y_playAudio() 
+			{ 
+				y_y_euphoric.play(); 
+				
+			}
+			
+			function y_checkSpelling()
+			{
+				
+				if ("euphoric" ===  document.getElementById("y-spell").value)
+				{
+					document.getElementById("assess-y").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-y").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		<!-- z_czar -->
+		<div class="w3-container w3-padding-16">
+		<audio id="z_czar">
+			<source src="audio/z_czar.mp3" type="audio/mpeg">
+		</audio>
+		
+		<button onclick="z_playAudio()" type="button">Play a "z" word</button>
+		<span><i>Spell it here --></i></span>
+		<input type="text" id="z-spell" size="25" placeholder="Spelling must be lower case!">
+		<button onclick="z_checkSpelling()" type="button">Check my spelling</button>
+		<span id="assess-z"><i>Correct, or not?</span>
+		</div>
+		
+		<script>
+			/* script for "z_czar" */
+			
+			var z_z_czar = document.getElementById("z_czar");
+			function z_playAudio() 
+			{ 
+				z_z_czar.play(); 
+				
+			}
+			
+			function z_checkSpelling()
+			{
+				
+				if ("czar" ===  document.getElementById("z-spell").value)
+				{
+					document.getElementById("assess-z").innerHTML = "<i>Correct!</i>";
+				}
+				else
+				{
+					document.getElementById("assess-z").innerHTML = "<i>Not Correct!</i>";
+				}
+			}
+			
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<br><br><br><br>
+		
+		<div class="w3-container w3-teal">
+		<h2><i><b>Thanks for playing!</b></i></h2>
+		</div>
+		<br><br>
+		
+		</div>
+	
+	</body>
+
+
+
+
+
+
+
+</html>

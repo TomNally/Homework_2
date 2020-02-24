@@ -1,0 +1,14 @@
+
+html 
+{
+  scroll-behavior: smooth;
+}
+
+hr
+{
+	border: 3px solid #999;
+	border-radius: 5px;
+}
+
+
+/* end of file */

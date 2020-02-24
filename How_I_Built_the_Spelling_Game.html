@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+
+	<head>
+	
+		<meta charset="utf-8">
+		<title>How I Built the Spelling Game</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+	
+	</head>
+
+
+	<body>
+	
+	<div class="w3-container">
+	
+		<div class="w3-container w3-blue-gray">
+		<h1>
+		How I Built the Spelling Game
+		</h1>
+		<p>by Tom Nally</p>
+		</div>
+		
+		<br>
+		
+		<div class="w3-container w3-pale-green">
+		<h3>Starting out...</h3>
+		</div>
+		
+		<div class="w3-container">
+		<p>
+		As part of our Homework 2 assignment, we were asked (among other things) to 
+		customize our portfolio page by making a portion of it interactive using JavaScript. 
+		Alternatively, we were given the option of developing a client-side JavaScript app. 
+		I decided that I would write a game of some kind.
+		</p>
+		<p>
+		I decided that a spelling game would be doable, and would require no animation.  But what 
+		form would it take?  I considered a fill-in-the-blank spelling game, where a few letters 
+		would be provided, and the player would have to fill in the remainder of the letters. 
+		</p>
+		<p>
+		An example might look like this: c _ _ e. But there are <i>too many</i> solutions to this kind of a spelling game. 
+		Below, you can see a few, but there are probably hundreds. 
+		</p>
+		
+		<ul class="w3-ul w3-card w3-sand" style="width:30%">
+		<li>cave</li>
+		<li>cafe</li>
+		<li>cove</li>
+		<li>come</li>
+		<li>cite</li>
+		</ul>
+		
+		<p>
+		Subsequently, it occurred to me that if I could record my voice speaking a 
+		hard-to-spell word, then have the player attempt to spell it in a text box, 
+		I could evaluate the spelling, and pronounce it <i>correct</i> or <i>not correct</i>. 
+		That's what I did. 
+		</p>
+		</div>
+		
+		<div class="w3-container w3-pale-green">
+		<h3>Development</h3>
+		</div>
+		
+		<div class="w3-container">
+		<p>
+		To record my voice, I used a built-in Windows 10 app called <i>Voice Recorder</i>. 
+		Using a free <a href="https://www.freac.org/">tool</a>, I converted the native Voice Recorder 
+		format, m4a, to mp3 format. Since there is little that <i>can't</i> be done with JavaScript, 
+		I figured that there must be a way to play audio files. 
+		I relied on <a href="https://www.w3schools.com/jsref/met_audio_play.asp">this</a> 
+		tutorial from w3schools. 
+		</p>
+		</div>
+		
+		<div class="w3-container w3-pale-green">
+		<h3>Challenges</h3>
+		</div>
+		
+		<div class="w3-container">
+		<p>
+		Ideally, a developer would want to place all scriping in a single js file, and source 
+		that file from somewhere within the html file. I found, however, that the JavaScript 
+		player would not work unless the <i>script</i> tag was internal to the html file. 
+		</p>
+		<p>
+		If the player didn't have to worry about uppercase/lowercase, that would make the game 
+		more enjoyable. But the console would report errors on JavaScript's toLowerCase() method. 
+		My only choice was to prompt the user to <i>use lower case only</i>.
+		</p>
+		</div>
+		
+		
+		<div class="w3-container w3-indigo w3-padding-16">
+		<h3>Thanks for reading!<h3>
+		</div>
+		<br><br>
+	
+	</div>
+	
+	
+	
+	
+	
+	</body>
+
+
+
+
+
+
+
+
+</html>

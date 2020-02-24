@@ -6,48 +6,66 @@
 	<head>
 	
 		<title>Tom Nally's Portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link href="index_css.css" rel="stylesheet" type="text/css" >
 	
 	</head>
 	
 	
 	<body>
-	
+	<div class="w3-container">
 		
 		<!-- NAVIGATION BAR  -->
 		
-		<nav id="top-navbar">  
-			<a href="#section-showcase"><strong>Tom Nally's Portfolio</strong></a>
-			<ul>
-				<li> <a href="#section-home"> Home </a>  </li>
-				<li> <a href="#section-about"> About </a>  </li>
-				<li> <a href="#section-projects"> Projects </a>  </li>
-				<li> <a href="#section-blog"> Blog </a>  </li>
-				<li> <a href="#section-contact"> Contact </a>  </li>
+		<div class="w3-top" id="top-navbar">
+		<div class="w3-bar w3-light-grey">
+			<a href="#section-home"     class="w3-bar-item w3-button">Home</a>
+			<a href="#section-about"    class="w3-bar-item w3-button">About</a>
+			<a href="#section-projects" class="w3-bar-item w3-button">Projects</a>
+			<a href="#section-blog"     class="w3-bar-item w3-button">Blog</a>
+			<a href="#section-contact"  class="w3-bar-item w3-button">Contact</a>
+		</div>
+		</div>
+		
+		
+		<div class="w3-panel w3-Teal w3-margin-top">
+			<br><br>
+			<h1>Tom Nally's Portfolio</h1>
 			
-			</ul>
+		</div>
 		
 		
-		</nav>
 		
-		<!-- SHOWCASE SECTION  -->
-		
-		<section id="section-showcase">
-			<div>
-				<h1>Tom Nally's Portfolio</h1>
-				<p>Contents of Nally's portfolio.</p>
-			</div>
-		</section>
-		
+		<!--
 		<aside id="sidebar">
 			<div>
 				<h3>News:</h3>
 				<p>News of the day.</p>
 			</div>
-		</aside>
+		</aside> 
+		-->
+		
+		<div class="w3-container w3-khaki ">
+			<h3>News:</h3>
+			
+		</div>
+		
+		<div class="w3-bar w3-light-grey">
+			<a href="https://www.nytimes.com/"          class="w3-bar-item w3-button">New York Times</a>
+			<a href="https://www.washingtonpost.com/"   class="w3-bar-item w3-button">Washington Post</a>
+			<a href="https://news.google.com/"          class="w3-bar-item w3-button">Google</a>
+			<a href="https://news.yahoo.com/"           class="w3-bar-item w3-button">Yahoo</a>
+			<a href="https://www.chicagotribune.com/"   class="w3-bar-item w3-button">Chicago Tribune</a>
+			<a href="https://www.chron.com/"            class="w3-bar-item w3-button">Houston Chronicle</a>
+		</div>
+		
 		
 		
 		<!-- HOME SECTION  -->
 		
+		<!--
+		<div>
 		<section id="section-home">
 			<h1>Welcome</h1>
 			<hr>
@@ -55,10 +73,29 @@
 			adventures within the Computer Science Department at the  
 			University of New Orleans.</p>
 		</section>
+		</div> -->
+		
+		<div class="w3-panel w3-pale-green">
+			<section id="section-home">
+				
+				<br><br>
+				<h1>Welcome</h1>
+				<hr>
+				<p>Welcome to my page!  Here, I will discuss a few of my 
+				adventures within the Computer Science Department at the  
+				University of New Orleans.</p>
+			</section>
+		</div>
+		
+		
 		
 		<!-- ABOUT SECTION  -->
 		
 		<section id="section-about">
+			
+			<div class="w3-container ">
+			
+			<br><br>
 			<h1>About</h1>
 			<hr>
 			<div>
@@ -66,101 +103,117 @@
 			</div>
 			<div>
 				<h4>Tomas Nally</h4>
-				<p>Skills • Achievements • Accomplishments</p>
+				<p>Skill list...</p>
 			</div>
 			
-			<table>
-				<thead>
-					<tr>
-						<th colspan='2'>Technical Skills</th>
-					</tr>
-				</thead>
+			
+			
+			<table class="w3-table w3-striped ">
+				<tr>
+					<th class="w3-bottombar">Tools</th>
+					<th class="w3-bottombar">Technologies</th>
+				</tr>
+				<tr>
+					<td>Programming tools</td>
+					<td>Java, JavaScript</td>
+					
+				</tr>
+				<tr>
+					<td>Frontend tools</td>
+					<td>HTML, CSS</td>
+					
+				</tr>
+				<tr>
+					<td>Database tools</td>
+					<td>MongoDB, Mongoose, SQL</td>
+				</tr>
+				<tr>
+					<td>Version Control & Deployment tools</td>
+					<td>Git Extensions, github, gitlab</td>
+				</tr>
+				<tr>
+					<td>Architecture & Design</td>
+					<td>OOP, MEAN Stack, REST, Agile, TDD</td>
+				</tr>
 				
-				<tbody>
-					<tr>
-						<th>Programming tools</th>
-						<td>Java, JavaScript</td>
-					</tr>
-					
-					<tr>
-						<th>Frontend tools</th>
-						<td>HTML, CSS</td>
-					</tr>
-					
-					<tr>
-						<th>Database tools</th>
-						<td>MongoDB, Mongoose, SQL</td>
-					</tr>
-					
-					<tr>
-						<th>Version Control & Deployment tools</th>
-						<td>Git Extensions, github, gitlab</td>
-					</tr>
-					
-					<tr>
-						<th>Architecture & Design</th>
-						<td>OOP, MEAN Stack, REST, Agile, TDD</td>
-					</tr>
-					
-				</tbody>
-			
-			
-			
+				
 			</table>
+			<br><br>
+			
+			</div>
 			
 		</section>
 		
 		<!-- PROJECTS SECTION  -->
 		
+		<div class="w3-panel w3-sand">
 		<section id="section-projects">
-			<h1>Projects</h1>
+			<br><br>
+			<img src="images/Nally_Projects.png">
 			<hr>
-			<p>A Summary of all the projects on which I have worked.</p>
+			<p>Projects on which I have worked:</p>
 			<div>
 				<div id="projects">
-					<a href='#' target = "_blank">
+					<!-- <a href='#' target = "_blank"> -->
+						
 						<div>
-							<p>Project</p>
-						</div>
-						<img src="images/Nally_Projects.png">
-						<div>
-							<h4>Wire Model Image Flight Simulator, written in Liberty Basic</h4>
-							<h4>Stokes 5th Order Wave Analysis, written in Liberty Basic</h4>
-							<h4>Battlespace (Game), written in Liberty Basic</h4>
-							<h4>Humble Space (Planetary Gravity Simulator), written in Liberty Basic</h4>
-							<h4>Humble Cad (3D Wire Model CAD Program), written in Liberty Basic</h4>
-							<h4>The Collision Simulator (Ball Collisions), written in Liberty Basic</h4>
+							<h4>Wire Model Image Flight Simulator</h4>
+							<h4>Stokes 5th Order Wave Analysis</h4>
+							<h4>Battlespace (Game)</h4>
+							<h4>Humble Space (Planetary Gravity Simulator)</h4>
+							<h4>Humble Cad (3D Wire Model CAD Program)</h4>
+							<h4>The Collision Simulator (Ball Collisions)</h4>
+							<h4>Steel Plate Girder Design</h4>
 						</div>
 						<div>
 							<small>by Tomas Nally</small>
+							<br><br>
 						</div>
-					</a>
+					<!-- </a> --> 
 				</div>
 			</div>
 		
 		</section>
+		</div>
 		
 		<!-- BLOG SECTION  -->
 		
 		<section id="section-blog">
+			
+			<div class="w3-container w3-blue-gray">
+			<br><br>
 			<h1>Blog</h1>
-			<hr>
+			
 			<p>I will blog about multiple topics, ranging from computer science, small system simulations, 
 			and civil engineering.</p>
-			<hr>
-			<article>
-				<h3>Blog Entry 1: <br> A Primer on Steel Columns <br> (For non-Civil Engineers!)</h3>
-				<small>Posted by Tom Nally on 2/5/2019</small>
+			
+			</div>
+			
+			<article class="w3-panel w3-pale-green ">
+				<h3>Blog Entry 1: A Primer on Steel Columns (For non-Civil Engineers!)</h3>
+				<small>Posted by Tom Nally on 2/5/2020</small>
 				<br><br>
 				<a href="post1.html">Read more...</a>
-			
+				<br><br>
 			</article>
+			
+			<article class="w3-panel w3-light-blue ">
+				<h3>Blog Entry 2: How I Built the Spelling Game</h3>
+				<small>Posted by Tom Nally on 2/25/2020</small>
+				<br><br>
+				<a href="How_I_Built_the_Spelling_Game.html">Read more...</a>
+				<br><br>
+			</article>
+			
 		
 		</section>
 		
 		<!-- CONTACT SECTION  -->
 		
 		<section id="section-contact">
+			
+			<div class="w3-container w3-pale-red ">
+			
 			<h1>Contact</h1>
 			<hr>
 			<h4>Send message</h4>
@@ -186,11 +239,13 @@
 				<button type="submit"> Submit </button>
 				
 			</form>
-		
+			<br><br>
+			</div>
 		</section>
 		
 		<!-- FOOTER SECTION  -->
 		
+		<div class="w3-container w3-dark-gray">
 		<footer>
 			<div>
 				<p>Copyright &copy; 2020 Tomas J. Nally</p>
@@ -198,9 +253,9 @@
 		
 		
 		</footer>
+		</div>
 		
-		
-	
+	</div>
 	</body>
 
 

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Spelling Game Specification</title>
+		
+		<!-- Required for W3.CSS styling -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link href="myCSS.css" rel="stylesheet" type="text/css" >
+	
+	</head>
+	
+	
+	
+	<body>
+		
+		<div class="w3-container">
+		
+		
+		<p><a href="index.html">Return to Tom Nally's Portfolio</a></p>
+		
+		
+		<div class="w3-container w3-pale-green">
+			<h1>Specifications for Conversion of <br>The Spelling Game <br>to Electron Format</h1>
+		</div>
+		
+		<br id="menuBar">
+		
+		<div class="w3-bar w3-light-grey" >
+			<a href="#whatIs" class="w3-bar-item w3-button">What is The Spelling Game?</a>
+			<a href="#roles" class="w3-bar-item w3-button">Spelling Game Roles</a>
+			<a href="#userStory1" class="w3-bar-item w3-button">User Story – Post-it Version</a>
+			<a href="#userStory2" class="w3-bar-item w3-button">User Story – Detailed Version</a>
+		</div>
+		<div class="w3-bar w3-light-grey" >
+			<a href="#frontend" class="w3-bar-item w3-button">Features Rendered by the Frontend</a>
+			<a href="#backend" class="w3-bar-item w3-button">Backend Features Performed by Node.js</a>
+			<a href="#database" class="w3-bar-item w3-button">Database Features</a>
+		</div>
+		
+		
+		<br>
+		
+		<div class="w3-container w3-khaki" id="whatIs">
+			<h3>What is The Spelling Game?</h3>
+		</div>
+		
+			<p>
+			I developed The Spelling Game between February 20th and February 23rd, 2020, to fulfill a homework requirement for CSCI 4208 at the University of New Orleans.    
+			<br><br>
+			The game is very simple to use.  The user clicks a button which provides a recording of a hard-to-spell word.  Then, the game provides a text box in which the user can spell the word.  The game checks to determine if the word has been spelled correctly.  If so, the game responds with <i>Correct!</i>  Otherwise the game responds with <i>Not Correct!</i>
+			<br><br>
+			This is a very casual game.  There are no time limits, and the user can attempt as many spellings as he or she desires.
+			</p>
+			
+			<p><a href="#menuBar">Return to the menu</a></p>
+		
+		<div class="w3-container w3-khaki" id="roles">
+			<h3>Spelling Game Roles</h3>
+		</div>
+		
+		
+			<p>
+			<u>System Administrator</u> – The System Administrator has no role.  The typical duties of an Administrator (OS updates, security, establishment of accounts, software installation) do not apply to the conversion of The Spelling Game to Electron format.
+			<br><br>
+			<u>Regular Users and Guests</u> – The Spelling Game will not differentiate between regular users and guests.  The user flow for regular users and guests will be as described in the slide, <a href="#userStory2">User Story – Detailed Version.</a> 
+			</p>
+			
+			<p><a href="#menuBar">Return to the menu</a></p>
+		
+		<div class="w3-container w3-khaki" id="userStory1">
+			<h3>User Story – Post-it Version</h3>
+		</div>
+		
+			<p>
+			As a user of The Spelling Game, I want a standalone desktop application that is easy to use and provides no time constraints, so that I can enjoy myself during leisure time.
+			</p>
+			
+			<p><a href="#menuBar">Return to the menu</a></p>
+		
+		<div class="w3-container w3-khaki" id="userStory2">
+			<h3>User Story – Detailed Version</h3>
+		</div>
+		
+			<p>
+			The Electron version of The Spelling Game will be distributed in a zip file.  After the file is unzipped, the user will find an exe file.  Clicking on the exe file will open The Spelling Game on the desktop.  After reading the instructions, the user will click a button to hear the hard-to-spell word.  One button is provided for each of the 26 letters of the alphabet.
+			<br><br>
+			A text box is provided for the user to attempt to spell the word.  After the user spells the word, the game will inform the user whether he or she spelled it correctly or not.  The user may attempt to re-spell as many times as he or she likes.
+			<br><br>
+			Alternatively, the user may continue down the list to attempt to spell other words.  There is no timer or ticking clock which specifies the amount of time the user can spend on any one word.
+			</p>
+			
+			<p><a href="#menuBar">Return to the menu</a></p>
+		
+		<div class="w3-container w3-khaki" id="frontend">
+			<h3>Features Rendered by the Frontend</h3>
+		</div>
+		<br>
+		<ul class="w3-ul w3-border w3-pale-blue">
+			<li>All text, whether paragraphs, "h1" elements, or anything else.</li>
+			<li>All 26 play buttons, one for each letter of the alphabet.</li>
+			<li>All 26 “Check my spelling” buttons.</li>
+			<li>All 26 text boxes, which are later evaluated to determine whether the user spelled the word correctly</li>
+			<li>All 26 "div" elements, which report whether the word has been spelled correctly or not</li>
+			<li>The single "a" element, which links to my source of hard-to-spell words</li>
+		</ul>
+			
+			<p><a href="#menuBar">Return to the menu</a></p>
+		
+		<br>
+		<div class="w3-container w3-khaki" id="backend">
+			<h3>Backend Features Performed by Node.js</h3>
+		</div>
+			
+			<p>
+			On my own, I was not aware how Electron uses Node.js.  However, 
+			<a href="https://medium.com/@paulbjensen/how-does-node-js-work-with-nw-js-and-electron-da9e50e2c3c1"
+			target="_blank">this website</a> elaborates on it. Quoting from the website:
+			
+			<br>
+		
+			<div class="w3-container w3-pale-blue w3-border w3-round-large">
+			“Electron uses Node.js along with Chromium, but rather than combining the event loops of the two pieces of software together, it combines them through Node.js’ node bindings feature. In this way, the Chromium and Node.js components can be updated easily without the need for custom modification of the source code, nor compilation afterwards.”
+			</div>
+		
+			</p>
+			
+			<p><a href="#menuBar">Return to the menu</a></p>
+		
+		<br>
+		<div class="w3-container w3-khaki" id="database">
+			<h3>Database Features</h3>
+		</div>
+		
+			<p>
+			The database for The Spelling Game consists of 26 recordings of hard-to-spell words.  These were recorded by the game’s developer, Tom Nally.  Each of the 26 recordings is played by an mp3-playing function.  For example, the function which plays the hard-to-spell g-word ("guillotine") is this one:
+			<br><br>
+			function g_playAudio()
+			</p>
+			
+			<p><a href="#menuBar">Return to the menu</a></p>
+		
+		<div class="w3-container w3-khaki">
+		<footer>
+			<div>
+				<p>by Tomas J. Nally • License for The Spelling Game converted to Electron: 
+				GNU All-permissive License
+				</p>
+			</div>
+		</footer>
+		</div>
+		
+		<p><a href="index.html">Return to Tom Nally's Portfolio</a></p>
+		<br>
+		
+		</div> <!-- This is the final div; don't delete it. -->
+		
+		
+	</body>
+
+
+
+
+
+
+
+
+</html>

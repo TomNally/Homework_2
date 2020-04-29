@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+	<head>
+	
+		<meta charset="utf-8" >
+		<title>Spelling Game Client Design</title>
+		
+		<!-- Required for W3.CSS styling -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+	</head>
+	
+	
+	
+	
+	
+	
+	<body>
+	<br>
+	<div class="w3-container">
+		<a href="index.html">Return to Tom Nally's Portfolio</a>
+	</div>
+	<br>
+	
+	<div class="w3-container">
+		<div class="w3-container w3-teal">
+			<h2>The Spelling Game Client Design</h2>
+			<h4>For Converting The Spelling Game to Electron Format</h4>
+		</div>
+		
+		<br>
+		
+		<div class="w3-bar w3-light-grey" >
+			<a href="#about" class="w3-bar-item w3-button">About The Spelling Game</a>
+			<a href="#mockups" class="w3-bar-item w3-button">Mockups</a>
+			<a href="#clientLogic" class="w3-bar-item w3-button">Client Logic</a>
+			<a href="#serverFetches" class="w3-bar-item w3-button">Server Fetches</a>
+			<a href="#toolLib" class="w3-bar-item w3-button">Tooling and Libraries</a>
+		</div>
+		
+		<br>
+		
+		<div class="w3-container w3-teal" id="about">
+			<h4>About The Spelling Game</h4>
+		</div>
+		
+		<div class="w3-container">
+		<p>
+			I developed The Spelling Game between February 20th and February 23rd 2020 to fulfill a homework requirement for CSCI 4208 at the University of New Orleans.  The game is very simple to use.  The user clicks a button which provides a recording of a hard-to-spell word.  Then, the game provides a text box in which the user can spell the word.  The game checks to determine if the word has been spelled correctly.  If so, the game responds with <i>Correct!</i>  Otherwise the game responds with <i>Not Correct!</i>  
+			<br><br>
+			This is a very casual game.  There are no time limits, and the user can attempt as many spellings as he or she desires. 
+		</p>
+		</div>
+		
+		<br>
+		<div class="w3-container w3-teal" id="mockups">
+			<h4>Mockups</h4>
+		</div>
+		
+		<br>
+		
+		<div class="w3-container">
+		<p>
+			The Spelling Game does not have multiple views.  It has a single screen through which the user scrolls.  Each of the 26 letters of the alphabet is associated with a hard-to-spell word.
+			<br><br>
+			At the top of the game, there is a brief introduction wherein the player is advised how the game is played.  Just below that, the game begins.  The player can start with any of the 26 letters of the alphabet, and there is no order enforced.  But let’s say the player starts with the letter “a”.  The player will see the button shown below:
+		</p>
+		
+		<img src="spec_images/play_a_word.png" style="max-width:100%;height:auto;">
+		
+		<p>
+			When the player presses that button, it will play a hard to spell word, typically beginning with the letter “a”.  I say “typically” because the game may intentionally try to trick the player!  For example, the common Louisiana surname, “Hebert” is phonetically pronounced like this: <i>A-bear</i>.
+			<br><br>
+			After the player hears the word, he is invited to spell it in the textbox.  Note that spelling must be lower case.
+		</p>
+		
+		<img src="spec_images/spell_it_here.png" style="max-width:100%;height:auto;">
+		
+		<p>
+			After the word is spelled, the user is provided with a button that offers to check the player’s spelling:
+		</p>
+		
+		<img src="spec_images/check_my_spelling_button.png" style="max-width:100%;height:auto;">
+		
+		<p>If the player has spelled it correctly, he or she will see this:</p>
+		
+		<img src="spec_images/correct.png" style="max-width:100%;height:auto;">
+		
+		<p>Otherwise, the player will see this:</p>
+		
+		<img src="spec_images/not_correct.png" style="max-width:100%;height:auto;">
+		
+		<p>
+			Then the player can go to the go to the next hard-to-spell word, or any word in the entire alphabet.  As was said previously, there is no requirement to go in order.
+		</p>
+		
+		<p>
+			The screen capture below shows the sequence of hard-to-spell words between “c” and “g”.  Note that the background colors alternate between pale green and white.  This is primarily done to give the game a measure of visual appeal.
+		</p>
+		
+		<img src="spec_images/c_to_g.png" style="max-width:100%;height:auto;">
+		   
+		</div>
+		
+		<br><br>
+		
+		<div class="w3-container w3-teal" id="clientLogic">
+			<h4>Client Logic</h4>
+		</div>
+		
+		<div class="w3-container">
+		
+		<p><img src="spec_images/play_a_word.png" style="max-width:100%;height:auto;"></p>
+		
+		<p>
+			JavaScript has three responsibilities in The Spelling Game.  The first is to play the mp3 audio file.  To accomplish this task the game author found a method on the fabulous website, <a href="https://www.w3schools.com/jsref/met_audio_play.asp" target="_blank">w3schools</a>.
+		</p>
+		
+		<p><img src="spec_images/must_be_lower_case.png" style="max-width:100%;height:auto;"></p>
+		
+		<p>
+			Second, JavaScript must evaluate the spelling that the user placed in the textbox.  That is, it gets the “value” in the textbox. The spelling is evaluated using the triple equal sign (“===”).
+		</p>
+				
+		<p><img src="spec_images/correct.png" style="max-width:100%;height:auto;"></p>
+		
+		<p>
+			Third, JavaScript advises Correct! or Not Correct! by using an innerHTML operation on a &lt;span&gt; element.
+		</p>
+		
+		</div>
+		
+		<div class="w3-container w3-teal" id="serverFetches">
+			<h4>Server Fetches</h4>
+		</div>
+		
+		<div class="w3-container">
+			<p>The Spelling Game, as currently constituted, makes no server requests.</p>
+		</div>
+		
+		<div class="w3-container w3-teal" id="toolLib">
+			<h4>Tooling and Libraries</h4>
+		</div>
+		
+		<div class="w3-container">
+		
+		<br>
+		
+		<p>
+			Recall from an earlier discussion that The Spelling Game does not have multiple views.  It has a single screen through which the user scrolls.  Here are the various libraries used:
+		</p>
+		
+		<ul class="w3-ul w3-card w3-pale-blue" style="width:50%">
+			<li>Styling is accomplished through the magnificent w3schools apparatus called <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a>.</li>
+			<li>JavaScript has three responsibilities as discussed in <a href="#clientLogic">Client Logic</a>.</li>
+			<li>Recall that The Spelling Game in its current form is a game playable <i>only</i> on a web page. But Electron uses a JSON file in the process of converting it to a desktop application.</li>
+		</ul>
+		
+		
+		</div>
+		
+		<br>
+		
+		<br>
+		<div class="w3-container">
+			<a href="index.html">Return to Tom Nally's Portfolio</a>
+		</div>
+		<br>
+		
+		<div class="w3-container w3-khaki">
+		<footer>
+			<div>
+				<p>The Spelling Game is by Tomas J. Nally • License: GNU All-permissive License</p>
+				
+			</div>
+		</footer>
+		</div>
+		
+		
+		<br><br>
+	
+	</div> <!-- Note: this is the closing div on the w3-container -->
+	</body>
+
+
+
+
+
+
+</html>
